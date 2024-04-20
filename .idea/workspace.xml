@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="cec69f0c-c74d-4a16-a5f9-965cb43dda9a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/sudokugame/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/sudokugame/controller/GameController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/sudokugame/controller/WelcomeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/sudokugame/model/Sudoku.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/sudokugame/model/TableSudoku.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/sudokugame/view/GameStage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/sudokugame/view/WelcomeStage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/sudokugame/view/alert/AlertBox.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/sudokugame/view/alert/IAlertBox.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/sudokugame/sudokugame.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/sudokugame/welcome.fxml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaFXApplication" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Use Maven wrapper" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="2f61AHPWNoLa4R6fcI5l7RFZJuK" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/julia/Downloads/words-search&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-17.0.10-corretto-17.0.10-4caba194b151-5cd809f4" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="cec69f0c-c74d-4a16-a5f9-965cb43dda9a" name="Changes" comment="" />
+      <created>1713106571865</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1713106571865</updated>
+      <workItem from="1713106573017" duration="1912000" />
+      <workItem from="1713110231804" duration="15000" />
+      <workItem from="1713110259721" duration="1145000" />
+      <workItem from="1713112896347" duration="776000" />
+      <workItem from="1713114318584" duration="120000" />
+      <workItem from="1713114469919" duration="1870000" />
+      <workItem from="1713116619808" duration="1808000" />
+      <workItem from="1713119703800" duration="2929000" />
+      <workItem from="1713124634930" duration="554000" />
+      <workItem from="1713125308825" duration="171000" />
+      <workItem from="1713125571192" duration="607000" />
+      <workItem from="1713126254588" duration="21000" />
+      <workItem from="1713126352756" duration="552000" />
+      <workItem from="1713129288487" duration="471000" />
+      <workItem from="1713139974826" duration="2394000" />
+      <workItem from="1713142890557" duration="1914000" />
+      <workItem from="1713145015926" duration="352000" />
+      <workItem from="1713145481152" duration="1648000" />
+      <workItem from="1713323452549" duration="137000" />
+      <workItem from="1713323670121" duration="195000" />
+      <workItem from="1713323898035" duration="52000" />
+      <workItem from="1713324105321" duration="74000" />
+      <workItem from="1713324264256" duration="152000" />
+      <workItem from="1713324448777" duration="169000" />
+      <workItem from="1713324787674" duration="92000" />
+      <workItem from="1713325936435" duration="619000" />
+      <workItem from="1713538170234" duration="514000" />
+      <workItem from="1713539270866" duration="43000" />
+      <workItem from="1713539515006" duration="154000" />
+      <workItem from="1713539691337" duration="279000" />
+      <workItem from="1713540005698" duration="57000" />
+      <workItem from="1713540169248" duration="317000" />
+      <workItem from="1713542153102" duration="94000" />
+      <workItem from="1713542342334" duration="34000" />
+      <workItem from="1713542397339" duration="50000" />
+      <workItem from="1713542481978" duration="117000" />
+      <workItem from="1713542642677" duration="197000" />
+      <workItem from="1713542915387" duration="801000" />
+      <workItem from="1713544559863" duration="114000" />
+      <workItem from="1713544694029" duration="535000" />
+      <workItem from="1713545364909" duration="156000" />
+      <workItem from="1713545573694" duration="587000" />
+      <workItem from="1713547707901" duration="348000" />
+      <workItem from="1713548279722" duration="185000" />
+      <workItem from="1713548507076" duration="12000" />
+      <workItem from="1713548833906" duration="1551000" />
+      <workItem from="1713550647443" duration="1012000" />
+      <workItem from="1713551973850" duration="834000" />
+      <workItem from="1713552870168" duration="95000" />
+      <workItem from="1713552997421" duration="94000" />
+      <workItem from="1713553143326" duration="82000" />
+      <workItem from="1713553281223" duration="157000" />
+      <workItem from="1713553789237" duration="45000" />
+      <workItem from="1713553882843" duration="128000" />
+      <workItem from="1713554102373" duration="38000" />
+      <workItem from="1713554182125" duration="1644000" />
+      <workItem from="1713556739549" duration="198000" />
+      <workItem from="1713556992472" duration="2134000" />
+      <workItem from="1713559669178" duration="162000" />
+      <workItem from="1713559949404" duration="99000" />
+      <workItem from="1713560104718" duration="17040000" />
+      <workItem from="1713584301388" duration="66000" />
+      <workItem from="1713584431178" duration="2859000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+</project>
