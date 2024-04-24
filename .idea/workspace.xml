@@ -7,8 +7,8 @@
     <list default="true" id="cec69f0c-c74d-4a16-a5f9-965cb43dda9a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sudokugame/controller/GameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sudokugame/controller/GameController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sudokugame/model/Sudoku.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sudokugame/model/Sudoku.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/sudokugame/sudokugame.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/sudokugame/sudokugame.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/sudokugame/welcome.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/sudokugame/welcome.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -142,14 +142,24 @@
       <workItem from="1713560104718" duration="17040000" />
       <workItem from="1713584301388" duration="66000" />
       <workItem from="1713584431178" duration="2859000" />
-      <workItem from="1713813599866" duration="9597000" />
-      <workItem from="1713846403200" duration="4291000" />
-      <workItem from="1713921720942" duration="973000" />
+      <workItem from="1713928900812" duration="10283000" />
+      <workItem from="1713965114116" duration="2249000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
