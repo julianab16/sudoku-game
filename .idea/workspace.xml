@@ -7,6 +7,11 @@
     <list default="true" id="cec69f0c-c74d-4a16-a5f9-965cb43dda9a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sudokugame/controller/GameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sudokugame/controller/GameController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sudokugame/controller/WelcomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sudokugame/controller/WelcomeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sudokugame/model/Sudoku.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sudokugame/model/Sudoku.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sudokugame/view/WelcomeStage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sudokugame/view/WelcomeStage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/sudokugame/sudokugame.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/sudokugame/sudokugame.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/sudokugame/welcome.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/sudokugame/welcome.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -151,7 +156,10 @@
       <workItem from="1714004864139" duration="18654000" />
       <workItem from="1714026102780" duration="718000" />
       <workItem from="1714048129059" duration="12000" />
-      <workItem from="1714049033815" duration="362000" />
+      <workItem from="1714049033815" duration="883000" />
+      <workItem from="1714055245461" duration="7179000" />
+      <workItem from="1714067207111" duration="332000" />
+      <workItem from="1714067708212" duration="1929000" />
     </task>
     <servers />
   </component>

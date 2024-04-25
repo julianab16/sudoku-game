@@ -11,7 +11,6 @@ import java.io.IOException;
 
 public class WelcomeStage extends Stage {
     private WelcomeController welcomeController;
-
     public WelcomeStage () throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource(
                 "/com/example/sudokugame/welcome.fxml"));
