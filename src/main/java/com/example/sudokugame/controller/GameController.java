@@ -1,6 +1,8 @@
 package com.example.sudokugame.controller;
 
 import com.example.sudokugame.model.Sudoku;
+import com.example.sudokugame.view.GameStage;
+import com.example.sudokugame.view.WelcomeStage;
 import com.example.sudokugame.view.alert.AlertBox;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -12,11 +14,14 @@ import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 
+import java.io.IOException;
+
 
 public class GameController {
     @FXML
     private GridPane GridPane;
     Sudoku sudoku = new Sudoku();
+    private int [][] sudokuPlayer = new int[9][9];
 
     public void  initialize() {
         for (int i = 0; i < 9; i++) {
@@ -25,16 +30,15 @@ public class GameController {
                 textFieldStyle(textfield);
                 textfield.setBorder(new Border(new BorderStroke(Color.BLACK, BorderStrokeStyle.DOTTED, CornerRadii.EMPTY, new BorderWidths(1))));
                 textfield.setText(String.valueOf(sudoku.getSudoku()[i][j]));
-                verifityEmptyNumber(textfield, sudoku.getSudoku()[i][j]);
+                verityEmptyNumber(textfield, sudoku.getSudoku()[i][j]);
                 GridPane.add(textfield,j,i);
                 onKeyTextField(textfield, i, j);
             }
         }
-
     }
 
-    private void onKeyTextField(TextField textfield, int i, int j) {
-        textfield.setOnKeyPressed(new EventHandler<KeyEvent>() {
+    private void onKeyTextField(TextField txt, int i, int j) {
+        txt.setOnKeyPressed(new EventHandler<KeyEvent>() {
             @Override
             public void handle(KeyEvent event) {
                     try {
@@ -46,72 +50,50 @@ public class GameController {
                         String content = "Solo se puedes ingresar numeros";
                         new AlertBox().showMessage(title, header, content);
                     }
-
-                    if (Integer.parseInt(event.getText()) != sudoku.getSudokuSolved()[i][j]){
+                sudoku.sudokuSolved();
+                if (Integer.parseInt(event.getText()) != sudoku.getSudoku()[i][j]){
                         String title = "Alerta";
                         String header = "Error";
-                        String content = "Numero equivocado";
+                        String content = "Numero Equivocado";
                         new AlertBox().showMessage(title, header, content);
-                    }
-                    else {
-                        sudoku.getSudoku()[i][j] = Integer.parseInt(event.getText());
-                    }
+                }
+                else {
+                    sudokuPlayer[i][j] = Integer.parseInt(event.getText());
+                }
 
             }
         });
     }
 
     @FXML
-    void onHandleButtonConfirm(ActionEvent event) {
-        int n = 0;
-        for (int i = 0; i < GridPane.getChildren().size(); i++) {
-            if (GridPane.getChildren().get(i) instanceof TextField) {
-                TextField textField = (TextField) GridPane.getChildren().get(i);
-                if (textField.getText().length() > 1) {
-                    textField.clear();
-                    String title = "Alerta";
-                    String header = "Error";
-                    String content = "Solo se puede ingresa UN numero";
-                    new AlertBox().showMessage(title, header, content);
-                }
-                if (textField.getText().isEmpty()) {
-                    n++;
-                }
-            }
-        }
-        if (n>0) {
-            String title = "Alerta";
-            String header = "Error";
-            String content = "Sudoku incompleto";
-            new AlertBox().showMessage(title, header, content);
-        }
-
-        if(verifitySodukos()){
-            String title = "Solucion";
-            String header = "Lo lograste";
-            String content = "¡Felicidades! Haz resuleto el sudoku";
+    void onHandleButtonConfirm(ActionEvent event){
+        if(veritySodukos()){
+            String title = "Victoria";
+            String header = "Lo lograste :)";
+            String content = "¡Felicidades! Haz resuelto el sudoku";
             new AlertBox().showMessageInformation(title, header, content);
         }
         else {
-            String title = "Erroneo";
-            String header = "Mmmmm";
-            String content = "Los siento, tu Sudoku es erroneo";
+            String title = "Perdiste";
+            String header = "Mmmmm :(";
+            String content = "Lo siento, tu solucion es erroneo o esta incompleta";
             new AlertBox().showMessage(title, header, content);
 
         }
     }
 
-    private boolean verifitySodukos(){
+    private boolean veritySodukos(){
+        sudoku.sudokuSolved();
         boolean n = false;
         int m=0;
         for (int i = 0; i < 9; i++) {
             for (int j = 0; j < 9; j++) {
-                if (sudoku.getSudoku()[i][j] == sudoku.getSudokuSolved()[i][j]) {
+                if (sudoku.getSudoku()[i][j] == sudokuPlayer[i][j]) {
                     m++;
                 }
             }
         }
-        if (m==81){
+        if (m==33){
             n = true;
         }
         else{
@@ -122,6 +104,7 @@ public class GameController {
 
     @FXML
     void onHandleButtonSolved(ActionEvent event) {
+        sudoku.sudokuSolved();
         for (int i = 0; i < GridPane.getChildren().size(); i++) {
             if (GridPane.getChildren().get(i) instanceof TextField) {
                 TextField textField = (TextField) GridPane.getChildren().get(i);
@@ -133,7 +116,7 @@ public class GameController {
                 TextField txt = new TextField();
                 textFieldStyle(txt);
                 txt.setBorder(new Border(new BorderStroke(Color.BLACK, BorderStrokeStyle.DOTTED, CornerRadii.EMPTY, new BorderWidths(1))));
-                txt.setText(String.valueOf(sudoku.getSudokuSolved()[i][j]));
+                txt.setText(String.valueOf(sudoku.getSudoku()[i][j]));
                 if (txt.getLength() > 0) {
                     txt.setEditable(false);
                     txt.setBackground(new Background(new BackgroundFill(Color.rgb(240, 240, 240), null, null)));
@@ -145,13 +128,14 @@ public class GameController {
         }
     }
 
-    private void verifityEmptyNumber(TextField textfield, int n){
+    private void verityEmptyNumber(TextField txt, int n){
         if (n !=0 ){
-            textfield.setEditable(false);
-            textfield.setBackground(new Background(new BackgroundFill(Color.rgb(240, 240, 240), null, null)));
+            txt.setEditable(false);
+            txt.setBackground(new Background(new BackgroundFill(Color.rgb(240, 240, 240), null, null)));
         }
-        else {textfield.clear();
-            textfield.setBackground(new Background(new BackgroundFill(Color.rgb(255, 255, 255), null, null)));
+        else {
+            txt.clear();
+            txt.setBackground(new Background(new BackgroundFill(Color.rgb(255, 255, 255), null, null)));
         }
     }
 
@@ -163,5 +147,8 @@ public class GameController {
         txt.setStyle("-fx-backgroud-color: pink");
         return txt;
     }
-
+    public void onHandleButtonBackToPlay(ActionEvent actionEvent) throws IOException {
+        GameStage.deleteInstance();
+        WelcomeStage.getInstance();
+    }
 }
