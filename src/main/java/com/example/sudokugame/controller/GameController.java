@@ -93,7 +93,7 @@ public class GameController {
                 }
             }
         }
-        if (m==33){
+        if (m==48){
             n = true;
         }
         else{
