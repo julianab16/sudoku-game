@@ -23,7 +23,7 @@ public class GameController {
             for (int j = 0; j < 9; j++) {
                 TextField textfield = new TextField();
                 textFieldSize(textfield);
-                textfield.setStyle("-fx-backgroud-color: pink");
+                textfield.setStyle("-fx-backgroud-color: pink");it init
                 textfield.setText(String.valueOf(sudoku.getSudoku()[i][j]));
                 verifityEmptyNumber(textfield, sudoku.getSudoku()[i][j]);
                 GridPane.add(textfield,j,i);
