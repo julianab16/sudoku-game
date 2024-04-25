@@ -39,9 +39,6 @@ public class GameController {
             public void handle(KeyEvent event) {
                     try {
                         Integer in = Integer.parseInt(event.getText());
-                        if (String.valueOf(event.getText().charAt(0)).equals(" ")){
-                            event.consume();
-                        }
 
                     } catch (NumberFormatException excep) {
                         String title = "Alerta";
@@ -49,6 +46,17 @@ public class GameController {
                         String content = "Solo se puedes ingresar numeros";
                         new AlertBox().showMessage(title, header, content);
                     }
+
+                    if (Integer.parseInt(event.getText()) != sudoku.getSudokuSolved()[i][j]){
+                        String title = "Alerta";
+                        String header = "Error";
+                        String content = "Numero equivocado";
+                        new AlertBox().showMessage(title, header, content);
+                    }
+                    else {
+                        sudoku.getSudoku()[i][j] = Integer.parseInt(event.getText());
+                    }
+
             }
         });
     }
@@ -77,6 +85,39 @@ public class GameController {
             String content = "Sudoku incompleto";
             new AlertBox().showMessage(title, header, content);
         }
+
+        if(verifitySodukos()){
+            String title = "Solucion";
+            String header = "Lo lograste";
+            String content = "¡Felicidades! Haz resuleto el sudoku";
+            new AlertBox().showMessageInformation(title, header, content);
+        }
+        else {
+            String title = "Erroneo";
+            String header = "Mmmmm";
+            String content = "Los siento, tu Sudoku es erroneo";
+            new AlertBox().showMessage(title, header, content);
+
+        }
+    }
+
+    private boolean verifitySodukos(){
+        boolean n = false;
+        int m=0;
+        for (int i = 0; i < 9; i++) {
+            for (int j = 0; j < 9; j++) {
+                if (sudoku.getSudoku()[i][j] == sudoku.getSudokuSolved()[i][j]) {
+                    m++;
+                }
+            }
+        }
+        if (m==81){
+            n = true;
+        }
+        else{
+            n = false;
+        }
+        return n;
     }
 
     @FXML

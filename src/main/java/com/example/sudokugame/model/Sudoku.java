@@ -52,7 +52,7 @@ public class Sudoku {
 
     public boolean comprobarSudoku() {
         for (int i = 0; i <9; i++) {
-            for (int j = 0; j < 9; j++) {
+            for (int j = 0; j <9; j++) {
                 int aux = sudoku[i][j];
                 sudoku[i][j] = 0;
                 if (!verifityFile(i, aux) || !verifityColum(j, aux) || !validarCuadrante(i, j, aux)) {
