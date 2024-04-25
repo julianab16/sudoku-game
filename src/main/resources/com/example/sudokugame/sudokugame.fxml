@@ -28,7 +28,7 @@
       <RowConstraints maxHeight="128.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
   </rowConstraints>
    <children>
-      <GridPane fx:id="GridPane" alignment="CENTER" gridLinesVisible="true" prefHeight="371.0" prefWidth="474.0" style="-fx-background-color: #E8F8F5; -fx-background-position: center; -fx-border-color: black; -fx-border-width: 3;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+      <GridPane fx:id="gridPane" alignment="CENTER" gridLinesVisible="true" prefHeight="371.0" prefWidth="474.0" style="-fx-background-color: #E8F8F5; -fx-background-position: center; -fx-border-color: black; -fx-border-width: 3;" GridPane.columnIndex="1" GridPane.rowIndex="1">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />

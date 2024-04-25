@@ -28,7 +28,7 @@ import java.io.IOException;
 
 public class GameController {
     @FXML
-    private GridPane GridPane; /** The layout container for the Sudoku grid */
+    private GridPane gridPane; /** The layout container for the Sudoku grid */
     Sudoku sudoku = new Sudoku(); /** Create a Sudoku object */
     private int [][] sudokuPlayer = new int[9][9]; /** Array to store player's input*/
 
@@ -41,7 +41,7 @@ public class GameController {
                 txt.setBorder(new Border(new BorderStroke(Color.BLACK, BorderStrokeStyle.DOTTED, CornerRadii.EMPTY, new BorderWidths(1))));
                 txt.setText(String.valueOf(sudoku.getSudoku()[i][j])); /** Set initial value */
                 verityEmptyNumber(txt, sudoku.getSudoku()[i][j]); /** Verify if the cell is empty */
-                GridPane.add(txt,j,i); /** Add the TextField to the GridPane */
+                gridPane.add(txt,j,i); /** Add the TextField to the GridPane */
                 onKeyTextField(txt, i, j); /** Listen for key presses */
             }
         }
@@ -120,9 +120,9 @@ public class GameController {
     @FXML
     void onHandleButtonSolved(ActionEvent event) {
         sudoku.sudokuSolved(); /** Get the complete sudoku solution */
-        for (int i = 0; i < GridPane.getChildren().size(); i++) {
-            if (GridPane.getChildren().get(i) instanceof TextField) {
-                TextField textField = (TextField) GridPane.getChildren().get(i);
+        for (int i = 0; i < gridPane.getChildren().size(); i++) {
+            if (gridPane.getChildren().get(i) instanceof TextField) {
+                TextField textField = (TextField) gridPane.getChildren().get(i);
                 textField.deselect(); /** Deselect any selected text field */
             }
         }
@@ -138,7 +138,7 @@ public class GameController {
                 } else {
                     txt.setBackground(new Background(new BackgroundFill(Color.rgb(255, 255, 255), null, null)));
                 }
-                GridPane.add(txt,j,i); /** Add the new text field to the GridPane */
+                gridPane.add(txt,j,i); /** Add the new text field to the GridPane */
             }
         }
     }
