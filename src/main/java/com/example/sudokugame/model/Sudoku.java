@@ -9,7 +9,7 @@ public class Sudoku {
 
     public Sudoku() {
         this.sudoku = new int[][]{
-                {8, 0, 6, 8, 0, 0, 0, 9, 4},
+                {1, 0, 6, 8, 0, 0, 0, 9, 4},
                 {0, 2, 0, 0, 6, 0, 7, 0, 0},
                 {7, 0, 0, 4, 0, 2, 0, 0, 0},
                 {0, 0, 0, 0, 0, 0, 0, 1, 0},
@@ -46,7 +46,59 @@ public class Sudoku {
         this.sudoku = sudoku;
     }
 
-/*
+    public void setSudokuSolved(int[][] sudokuSolved) {
+        this.sudokuSolved = sudokuSolved;
+    }
+
+    public boolean comprobarSudoku() {
+        for (int i = 0; i <9; i++) {
+            for (int j = 0; j < 9; j++) {
+                int aux = sudoku[i][j];
+                sudoku[i][j] = 0;
+                if (!verifityFile(i, aux) || !verifityColum(j, aux) || !validarCuadrante(i, j, aux)) {
+                    sudoku[i][j]=aux;
+                    return false;
+                }
+                sudoku[i][j]=aux;
+            }
+        }
+        return true;
+    }
+    public boolean solveSudoku(){
+        for (int i=0; i< 9; i++){
+            for (int j=0; j< 9; j++){
+                if(sudoku[i][j]==0){
+                    for (int k=0; k<=9; k++){
+                        if(verifityFile(i,k)&&verifityColum(j,k)&&validarCuadrante(i,j,k)){
+                            sudoku[i][j]=k;
+                            if(solveSudoku()) return true;
+                            sudoku[i][j]=0;
+                        }
+                    }return false;
+                }
+            }
+        }return true;
+    }
+
+    public boolean validarCuadrante(int i, int j, int k){
+        int posI = subCuadranteActual(i);
+        int posJ = subCuadranteActual(j);
+
+        for (int l=posI-3; l<posI;l++){
+            for(int m = posJ-3; m < posJ; m++){
+                if (sudoku[l][m]==k){
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+    public int subCuadranteActual(int pos){
+        if(pos<=2) return 3;
+        else if(pos<=5)return 6;
+        else return 9;
+    }
+
     public boolean verifityFile(int i, int v) {
         for (int j = 0; j < 9; j++) {
             if (sudoku[i][j] == v) {
@@ -64,28 +116,6 @@ public class Sudoku {
         }
         return true;
     }
-
-    public boolean SudokuSolved() {
-        for (int i = 0; i < sudoku.length; i++) {
-            for (int j = 0; j < sudoku[0].length; j++) {
-                if (sudoku[i][j] == 0) {
-                    for (int valor = 1; valor <= 9; valor++) {
-                        if (verifityFile(i, valor) && verifityColum(j, valor)) {
-                            sudoku[i][j] = valor;
-                            if (SudokuSolved()) {
-                                return true;
-                            }
-                            sudoku[i][j] = 0;
-                        }
-                    }
-                    return false;
-                }
-            }
-        }
-        return true;
-    }
-
- */
 
 }
 

@@ -9,6 +9,7 @@ import javafx.geometry.Pos;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.*;
+import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 
 
@@ -21,7 +22,8 @@ public class GameController {
         for (int i = 0; i < 9; i++) {
             for (int j = 0; j < 9; j++) {
                 TextField textfield = new TextField();
-                textFieldSize(textfield);
+                textFieldStyle(textfield);
+                textfield.setBorder(new Border(new BorderStroke(Color.BLACK, BorderStrokeStyle.DOTTED, CornerRadii.EMPTY, new BorderWidths(1))));
                 textfield.setText(String.valueOf(sudoku.getSudoku()[i][j]));
                 verifityEmptyNumber(textfield, sudoku.getSudoku()[i][j]);
                 GridPane.add(textfield,j,i);
@@ -70,7 +72,6 @@ public class GameController {
             }
         }
         if (n>0) {
-            n++;
             String title = "Alerta";
             String header = "Error";
             String content = "Sudoku incompleto";
@@ -78,31 +79,48 @@ public class GameController {
         }
     }
 
-    private void verifityEmptyNumber(TextField textfield, int n){
-        if (n !=0 ){
-            textfield.setEditable(false);
-        }
-        else {textfield.clear();}
-    }
-
     @FXML
     void onHandleButtonSolved(ActionEvent event) {
-        /*
         for (int i = 0; i < GridPane.getChildren().size(); i++) {
             if (GridPane.getChildren().get(i) instanceof TextField) {
                 TextField textField = (TextField) GridPane.getChildren().get(i);
-                textField.setText(String.valueOf(sudoku.getSudokuSolved()));
+                textField.deselect();
             }
         }
-         */
+        for (int i = 0; i < 9; i++) {
+            for (int j = 0; j < 9; j++) {
+                TextField txt = new TextField();
+                textFieldStyle(txt);
+                txt.setBorder(new Border(new BorderStroke(Color.BLACK, BorderStrokeStyle.DOTTED, CornerRadii.EMPTY, new BorderWidths(1))));
+                txt.setText(String.valueOf(sudoku.getSudokuSolved()[i][j]));
+                if (txt.getLength() > 0) {
+                    txt.setEditable(false);
+                    txt.setBackground(new Background(new BackgroundFill(Color.rgb(240, 240, 240), null, null)));
+                } else {
+                    txt.setBackground(new Background(new BackgroundFill(Color.rgb(255, 255, 255), null, null)));
+                }
+                GridPane.add(txt,j,i);
+            }
+        }
     }
 
-    public TextField textFieldSize(TextField txt){
+    private void verifityEmptyNumber(TextField textfield, int n){
+        if (n !=0 ){
+            textfield.setEditable(false);
+            textfield.setBackground(new Background(new BackgroundFill(Color.rgb(240, 240, 240), null, null)));
+        }
+        else {textfield.clear();
+            textfield.setBackground(new Background(new BackgroundFill(Color.rgb(255, 255, 255), null, null)));
+        }
+    }
+
+    public TextField textFieldStyle(TextField txt) {
         txt.setMaxWidth(50);
         txt.setMaxHeight(45);
-        txt.setFont(new Font("Verdana",20));
+        txt.setFont(new Font("Verdana", 20));
         txt.setAlignment(Pos.CENTER);
         txt.setStyle("-fx-backgroud-color: pink");
         return txt;
     }
+
 }

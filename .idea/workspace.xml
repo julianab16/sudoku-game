@@ -8,7 +8,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sudokugame/controller/GameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sudokugame/controller/GameController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sudokugame/model/Sudoku.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sudokugame/model/Sudoku.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/sudokugame/sudokugame.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/sudokugame/sudokugame.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +24,12 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PUSH_TAGS">
+      <GitPushTagMode>
+        <option name="argument" value="--tags" />
+        <option name="title" value="All" />
+      </GitPushTagMode>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MavenImportPreferences">
@@ -143,7 +148,8 @@
       <workItem from="1713584301388" duration="66000" />
       <workItem from="1713584431178" duration="2859000" />
       <workItem from="1713928900812" duration="10283000" />
-      <workItem from="1713965114116" duration="2249000" />
+      <workItem from="1713965114116" duration="2939000" />
+      <workItem from="1714004864139" duration="7517000" />
     </task>
     <servers />
   </component>
