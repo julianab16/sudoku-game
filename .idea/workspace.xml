@@ -7,6 +7,11 @@
     <list default="true" id="cec69f0c-c74d-4a16-a5f9-965cb43dda9a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sudokugame/controller/GameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sudokugame/controller/GameController.java" afterDir="false" />
+<<<<<<< HEAD
+=======
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sudokugame/model/Sudoku.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sudokugame/model/Sudoku.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sudokugame/view/alert/AlertBox.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sudokugame/view/alert/AlertBox.java" afterDir="false" />
+>>>>>>> b7f861fe266a2726231356498229a4054b81e0f7
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +28,12 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PUSH_TAGS">
+      <GitPushTagMode>
+        <option name="argument" value="--tags" />
+        <option name="title" value="All" />
+      </GitPushTagMode>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MavenImportPreferences">
@@ -140,10 +151,16 @@
       <workItem from="1713560104718" duration="17040000" />
       <workItem from="1713584301388" duration="66000" />
       <workItem from="1713584431178" duration="2859000" />
+<<<<<<< HEAD
       <workItem from="1713813599866" duration="9597000" />
       <workItem from="1713846403200" duration="4291000" />
       <workItem from="1713921720942" duration="2422000" />
       <workItem from="1714011882894" duration="6644000" />
+=======
+      <workItem from="1713928900812" duration="10283000" />
+      <workItem from="1713965114116" duration="2939000" />
+      <workItem from="1714004864139" duration="12409000" />
+>>>>>>> b7f861fe266a2726231356498229a4054b81e0f7
     </task>
     <servers />
   </component>

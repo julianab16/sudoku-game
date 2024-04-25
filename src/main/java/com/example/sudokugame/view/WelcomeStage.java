@@ -8,10 +8,18 @@ import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+/** Authors:
+ Juliana Melissa Bolaños Araujo
+ Ivan David Ausecha Salamanca-2328223
+ Laura Stefania Salazar Blanco-2327896
+ Emails:
 
+ ivan.ausecha@correounivale.edu.co
+ laura.blanco@correounivalle.edu.co */
 public class WelcomeStage extends Stage {
+    /** Variable to keep track of the controller for the welcome screen.*/
     private WelcomeController welcomeController;
-
+    /** The constructor method */
     public WelcomeStage () throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource(
                 "/com/example/sudokugame/welcome.fxml"));
